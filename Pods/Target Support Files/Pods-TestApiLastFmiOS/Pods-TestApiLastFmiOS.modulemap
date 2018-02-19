@@ -1,0 +1,6 @@
+framework module Pods_TestApiLastFmiOS {
+  umbrella header "Pods-TestApiLastFmiOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
