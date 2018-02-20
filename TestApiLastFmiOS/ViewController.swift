@@ -15,6 +15,7 @@ class ViewController: ButtonBarPagerTabStripViewController {
         loadDesign()
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -56,6 +57,12 @@ class ViewController: ButtonBarPagerTabStripViewController {
                 newCell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             }
+        }
+        
+        let navBar = self.navigationController?.navigationBar
+        if let navBar = navBar{
+            navBar.setBackgroundImage(UIImage(), for: .default)
+            navBar.shadowImage = UIImage()
         }
         
     }
