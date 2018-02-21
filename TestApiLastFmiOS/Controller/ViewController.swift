@@ -15,6 +15,7 @@ class ViewController: ButtonBarPagerTabStripViewController {
         loadDesign()
         super.viewDidLoad()
         
+        //ApiService.getTopArtist()
         
     }
 

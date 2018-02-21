@@ -9,4 +9,5 @@ target 'TestApiLastFmiOS' do
 
   # Pods for TestApiLastFmiOS
   pod 'XLPagerTabStrip', '~> 8.0'
+  pod 'Alamofire', '~> 4.6'
 end
