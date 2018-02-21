@@ -16,7 +16,7 @@
 		CE179F31203A45DB00B24560 /* TopArtists2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE179F30203A45DB00B24560 /* TopArtists2TableViewController.swift */; };
 		CE179F33203A45EC00B24560 /* TopArtists2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE179F32203A45EC00B24560 /* TopArtists2TableViewCell.swift */; };
 		CE179F35203A497800B24560 /* TopArtistsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE179F34203A497800B24560 /* TopArtistsCollectionViewController.swift */; };
-		CE179F37203A49BF00B24560 /* TopArtistsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE179F36203A49BF00B24560 /* TopArtistsCollectionViewCell.swift */; };
+		CE4E8804203D2632006E46A6 /* ArtistCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E8803203D2632006E46A6 /* ArtistCVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		CE179F30203A45DB00B24560 /* TopArtists2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtists2TableViewController.swift; sourceTree = "<group>"; };
 		CE179F32203A45EC00B24560 /* TopArtists2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtists2TableViewCell.swift; sourceTree = "<group>"; };
 		CE179F34203A497800B24560 /* TopArtistsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsCollectionViewController.swift; sourceTree = "<group>"; };
-		CE179F36203A49BF00B24560 /* TopArtistsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE4E8803203D2632006E46A6 /* ArtistCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,8 @@
 				CE179F26203A367600B24560 /* Info.plist */,
 				CE179F30203A45DB00B24560 /* TopArtists2TableViewController.swift */,
 				CE179F32203A45EC00B24560 /* TopArtists2TableViewCell.swift */,
-				CE179F36203A49BF00B24560 /* TopArtistsCollectionViewCell.swift */,
 				CE179F34203A497800B24560 /* TopArtistsCollectionViewController.swift */,
+				CE4E8803203D2632006E46A6 /* ArtistCVCell.swift */,
 			);
 			path = TestApiLastFmiOS;
 			sourceTree = "<group>";
@@ -231,8 +231,8 @@
 			files = (
 				CE179F33203A45EC00B24560 /* TopArtists2TableViewCell.swift in Sources */,
 				CE179F1D203A367600B24560 /* ViewController.swift in Sources */,
+				CE4E8804203D2632006E46A6 /* ArtistCVCell.swift in Sources */,
 				CE179F1B203A367600B24560 /* AppDelegate.swift in Sources */,
-				CE179F37203A49BF00B24560 /* TopArtistsCollectionViewCell.swift in Sources */,
 				CE179F31203A45DB00B24560 /* TopArtists2TableViewController.swift in Sources */,
 				CE179F35203A497800B24560 /* TopArtistsCollectionViewController.swift in Sources */,
 			);

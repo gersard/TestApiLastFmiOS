@@ -14,7 +14,7 @@ class ViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         loadDesign()
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         
     }
 

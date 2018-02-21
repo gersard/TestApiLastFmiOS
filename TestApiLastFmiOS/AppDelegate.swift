@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+//API key    5bc03e99dcc8b895ef71175b599ca5a5
+//Shared secret    a56cb5b779842c461f50cc630fb566d7
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
