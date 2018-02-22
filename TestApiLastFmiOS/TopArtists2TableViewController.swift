@@ -13,7 +13,7 @@ class TopArtists2TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView?.backgroundColor = UIColor(red:0.22, green:0.24, blue:0.26, alpha:1.0)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -40,7 +40,7 @@ class TopArtists2TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "topArtists2Cell", for: indexPath) as! TopArtists2TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "topArtists2Cell", for: indexPath)
 
         
 

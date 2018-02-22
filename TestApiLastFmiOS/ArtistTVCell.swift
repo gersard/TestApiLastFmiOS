@@ -1,15 +1,17 @@
 //
-//  TopArtists2TableViewCell.swift
+//  ArtistTVCell.swift
 //  TestApiLastFmiOS
 //
-//  Created by Gerardo Mascayano on 18-02-18.
+//  Created by Gerardo Mascayano on 22-02-18.
 //  Copyright © 2018 Gerardo Mascayano. All rights reserved.
 //
 
 import UIKit
 
-class TopArtists2TableViewCell: UITableViewCell {
-
+class ArtistTVCell: UITableViewCell {
+    @IBOutlet weak var imageBackground: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -101,6 +101,9 @@ extension TopArtistsCollectionViewController : IndicatorInfoProvider {
 extension TopArtistsCollectionViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width: 160, height: 160)
+        let widthScreen = UIScreen.main.bounds.size.width
+        let cellWidth = widthScreen - 30
+        
+        return CGSize(width: cellWidth / 2, height: cellWidth / 2)
     }
 }
