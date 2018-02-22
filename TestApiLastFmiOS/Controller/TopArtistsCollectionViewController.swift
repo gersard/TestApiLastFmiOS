@@ -8,17 +8,26 @@
 
 import UIKit
 import XLPagerTabStrip
+import Alamofire
+
 private let reuseIdentifier = "ArtistsCVC"
 
 class TopArtistsCollectionViewController: UICollectionViewController {
 
+    var topArtists: [Artist]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.collectionView?.backgroundColor = UIColor(red:0.22, green:0.24, blue:0.26, alpha:1.0)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Do any additional setup after loading the view.
+        ApiService.getTopArtist { (artistRoot) in
+            if let artist = artistRoot?.artists.artist{
+                self.topArtists = artist
+                self.collectionView?.reloadData()
+            }
+        }
     }
     /*
     // MARK: - Navigation
@@ -31,17 +40,22 @@ class TopArtistsCollectionViewController: UICollectionViewController {
     */
 
     // MARK: UICollectionViewDataSource
-
-
+   
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return topArtists == nil ? 0 : (topArtists?.count)!
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtistCVCell
         
+        let currentArtist = topArtists![indexPath.row]
+        cell.nameLabel.text = currentArtist.name
+        Alamofire.request(URL(string: currentArtist.image[2].text)!).response{
+            (response) in
+            cell.imageArtist.image = UIImage(data: response.data!, scale: 1)
+        }
     
         return cell
     }
@@ -82,5 +96,11 @@ class TopArtistsCollectionViewController: UICollectionViewController {
 extension TopArtistsCollectionViewController : IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Top Artistas")
+    }
+}
+extension TopArtistsCollectionViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: 160, height: 160)
     }
 }

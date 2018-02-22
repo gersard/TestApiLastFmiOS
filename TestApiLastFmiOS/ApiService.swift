@@ -21,9 +21,30 @@ class ApiService {
     static let urlGetTopArtist = "\(urlBase)"
     
     
-    static func getTopArtist(){
+    static func getTopArtist(onCompletion: @escaping (ArtistRoot?) -> Void){
         Alamofire.request(URL(string: urlGetTopArtist)!).responseJSON { (response) in
-            print(response)
+            //print("Response: ",response)
+            
+            do{
+                let artistas = try JSONDecoder().decode(ArtistRoot.self, from: response.data!)
+                onCompletion(artistas)
+            }catch let jsonError {
+                print(jsonError)
+                onCompletion(nil)
+            }
+            
+            
+            
+//            if let jsonResponse = response.result.value as? Dictionary<String,Any>{
+//                if let jsonArtists = jsonResponse["artists"] as? Dictionary<String, Any>{
+//
+//                    print("EXITO",jsonArtists)
+//                }
+//
+//            }else{
+//                print("ERROR")
+//            }
+            
         }
     }
     

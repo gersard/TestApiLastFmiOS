@@ -7,14 +7,24 @@
 //
 
 import Foundation
-struct Artist {
+struct ArtistRoot: Decodable {
+    let artists : Artists
+}
+struct Artists : Decodable{
+    let artist: [Artist]
+}
+struct Artist : Decodable {
     let name: String
-    let playcount: Int
-    let listeners: Int
-    let artistImages: [ArtistImage]
+    let playcount: String
+    let listeners: String
+    let image: [ArtistImage]
 }
 
-struct ArtistImage {
+struct ArtistImage: Codable {
     let text: String
     let size: String
+    
+    private enum CodingKeys : String, CodingKey {
+        case text = "#text", size
+    }
 }
