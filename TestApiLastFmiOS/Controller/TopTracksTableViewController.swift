@@ -52,6 +52,9 @@ class TopTracksTableViewController: UITableViewController {
         
         let currentTrack = self.tracks![indexPath.row]
         cell.name.text = currentTrack.name
+        cell.artistNameLabel.text = currentTrack.artist.name
+        cell.listenersLabel.text = currentTrack.listeners
+        cell.playcountsLabel.text = currentTrack.playcount
         Alamofire.request(URL(string: currentTrack.image[2].text)!).response{
             (response) in
             cell.imageBackground.image = UIImage(data: response.data!, scale: 1)

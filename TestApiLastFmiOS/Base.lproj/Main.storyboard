@@ -124,7 +124,7 @@
         <scene sceneID="XmP-6K-W2f">
             <objects>
                 <tableViewController storyboardIdentifier="TopArtistsTVC" id="WQQ-pC-wFx" customClass="TopTracksTableViewController" customModule="TestApiLastFmiOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="240" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oOe-pd-VDB">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="240" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oOe-pd-VDB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,7 +133,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9v-F9-Uet" id="hH3-NB-s1K">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="artistDummy" translatesAutoresizingMaskIntoConstraints="NO" id="uS8-8Q-1El">
@@ -142,19 +142,48 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHc-UX-Hls">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radiohead  dwdwqdwqdwqdwqdqdwqddqwdwddqwdqdwqw" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NkP-HS-Cdk">
-                                                    <rect key="frame" x="40" y="77.5" width="295" height="26.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boulevard of broken dreams" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NkP-HS-Cdk">
+                                                    <rect key="frame" x="40" y="80" width="295" height="57.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elc-8R-DHb">
+                                                    <rect key="frame" x="40" y="145" width="295" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aS0-Rz-gR7">
+                                                    <rect key="frame" x="115" y="175.5" width="145" height="18"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLp-fq-gHP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="62.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55634" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvi-dx-88r">
+                                                            <rect key="frame" x="82.5" y="0.0" width="62.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.39966823630136988" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="aS0-Rz-gR7" firstAttribute="top" secondItem="Elc-8R-DHb" secondAttribute="bottom" constant="10" id="39d-8k-SjD"/>
+                                                <constraint firstAttribute="trailing" secondItem="Elc-8R-DHb" secondAttribute="trailing" constant="40" id="4DJ-tg-Qvv"/>
                                                 <constraint firstAttribute="trailing" secondItem="NkP-HS-Cdk" secondAttribute="trailing" constant="40" id="6Ff-56-iFl"/>
                                                 <constraint firstItem="NkP-HS-Cdk" firstAttribute="leading" secondItem="tHc-UX-Hls" secondAttribute="leading" constant="40" id="7Ah-dc-jsV"/>
-                                                <constraint firstItem="NkP-HS-Cdk" firstAttribute="centerY" secondItem="tHc-UX-Hls" secondAttribute="centerY" id="dIa-vU-CRi"/>
+                                                <constraint firstItem="Elc-8R-DHb" firstAttribute="centerX" secondItem="tHc-UX-Hls" secondAttribute="centerX" id="NnL-cN-73a"/>
+                                                <constraint firstItem="Elc-8R-DHb" firstAttribute="top" secondItem="NkP-HS-Cdk" secondAttribute="bottom" constant="8" id="Q6X-dq-SiK"/>
+                                                <constraint firstItem="NkP-HS-Cdk" firstAttribute="top" secondItem="tHc-UX-Hls" secondAttribute="top" constant="80" id="ZMd-8p-ibt"/>
+                                                <constraint firstItem="aS0-Rz-gR7" firstAttribute="centerX" secondItem="tHc-UX-Hls" secondAttribute="centerX" id="iBI-4a-J53"/>
                                                 <constraint firstItem="NkP-HS-Cdk" firstAttribute="centerX" secondItem="tHc-UX-Hls" secondAttribute="centerX" id="svE-dH-z0Z"/>
+                                                <constraint firstItem="Elc-8R-DHb" firstAttribute="leading" secondItem="tHc-UX-Hls" secondAttribute="leading" constant="40" id="uym-zc-aW0"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -170,8 +199,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="artistNameLabel" destination="Elc-8R-DHb" id="6v8-gz-9co"/>
                                     <outlet property="imageBackground" destination="uS8-8Q-1El" id="qta-S7-IKf"/>
+                                    <outlet property="listenersLabel" destination="XLp-fq-gHP" id="M6x-j8-IEe"/>
                                     <outlet property="name" destination="NkP-HS-Cdk" id="UqH-UJ-5ia"/>
+                                    <outlet property="playcountsLabel" destination="nvi-dx-88r" id="ybv-m0-XYb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

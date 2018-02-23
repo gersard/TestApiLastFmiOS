@@ -15,9 +15,10 @@ struct Artists : Decodable{
 }
 struct Artist : Decodable {
     let name: String
-    let playcount: String
-    let listeners: String
-    let image: [ArtistImage]
+    let playcount: String?
+    let listeners: String?
+    let image: [ArtistImage]?
+    
 }
 
 struct ArtistImage: Codable {

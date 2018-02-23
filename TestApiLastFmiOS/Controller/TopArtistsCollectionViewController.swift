@@ -52,7 +52,7 @@ class TopArtistsCollectionViewController: UICollectionViewController {
         
         let currentArtist = topArtists![indexPath.row]
         cell.nameLabel.text = currentArtist.name
-        Alamofire.request(URL(string: currentArtist.image[2].text)!).response{
+        Alamofire.request(URL(string: currentArtist.image![2].text)!).response{
             (response) in
             cell.imageArtist.image = UIImage(data: response.data!, scale: 1)
         }

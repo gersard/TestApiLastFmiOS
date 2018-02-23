@@ -9,8 +9,12 @@
 import UIKit
 
 class ArtistTVCell: UITableViewCell {
+    
     @IBOutlet weak var imageBackground: UIImageView!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var artistNameLabel: UILabel!
+    @IBOutlet weak var listenersLabel: UILabel!
+    @IBOutlet weak var playcountsLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

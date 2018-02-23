@@ -20,8 +20,9 @@ struct Track : Decodable {
     let name : String
     var playcount : String
     let listeners : String
-    //let artist : Artist
+    let artist : Artist
     let image : [TrackImage]
+    
 }
 
 struct TrackImage: Codable {
