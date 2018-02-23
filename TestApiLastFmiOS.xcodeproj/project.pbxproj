@@ -13,12 +13,13 @@
 		CE179F20203A367600B24560 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE179F1E203A367600B24560 /* Main.storyboard */; };
 		CE179F22203A367600B24560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE179F21203A367600B24560 /* Assets.xcassets */; };
 		CE179F25203A367600B24560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE179F23203A367600B24560 /* LaunchScreen.storyboard */; };
-		CE179F31203A45DB00B24560 /* TopArtists2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE179F30203A45DB00B24560 /* TopArtists2TableViewController.swift */; };
+		CE179F31203A45DB00B24560 /* TopTracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE179F30203A45DB00B24560 /* TopTracksTableViewController.swift */; };
 		CE179F35203A497800B24560 /* TopArtistsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE179F34203A497800B24560 /* TopArtistsCollectionViewController.swift */; };
 		CE4E8804203D2632006E46A6 /* ArtistCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E8803203D2632006E46A6 /* ArtistCVCell.swift */; };
 		CE4E8806203D276D006E46A6 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E8805203D276D006E46A6 /* Artist.swift */; };
 		CE4E880A203D29AC006E46A6 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E8809203D29AC006E46A6 /* ApiService.swift */; };
 		CEAAAD32203E751C00AD6A44 /* ArtistTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD31203E751C00AD6A44 /* ArtistTVCell.swift */; };
+		CEAAAD34203FAE2E00AD6A44 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD33203FAE2E00AD6A44 /* Track.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +33,13 @@
 		CE179F21203A367600B24560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE179F24203A367600B24560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE179F26203A367600B24560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE179F30203A45DB00B24560 /* TopArtists2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtists2TableViewController.swift; sourceTree = "<group>"; };
+		CE179F30203A45DB00B24560 /* TopTracksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTracksTableViewController.swift; sourceTree = "<group>"; };
 		CE179F34203A497800B24560 /* TopArtistsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsCollectionViewController.swift; sourceTree = "<group>"; };
 		CE4E8803203D2632006E46A6 /* ArtistCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCVCell.swift; sourceTree = "<group>"; };
 		CE4E8805203D276D006E46A6 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		CE4E8809203D29AC006E46A6 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		CEAAAD31203E751C00AD6A44 /* ArtistTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTVCell.swift; sourceTree = "<group>"; };
+		CEAAAD33203FAE2E00AD6A44 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +96,6 @@
 				CE4E8808203D28DD006E46A6 /* Controller */,
 				CE179F1E203A367600B24560 /* Main.storyboard */,
 				CE179F23203A367600B24560 /* LaunchScreen.storyboard */,
-				CE179F30203A45DB00B24560 /* TopArtists2TableViewController.swift */,
 				CE4E8803203D2632006E46A6 /* ArtistCVCell.swift */,
 				CEAAAD31203E751C00AD6A44 /* ArtistTVCell.swift */,
 				CE4E8807203D28CC006E46A6 /* Model */,
@@ -109,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4E8805203D276D006E46A6 /* Artist.swift */,
+				CEAAAD33203FAE2E00AD6A44 /* Track.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,6 +120,7 @@
 			children = (
 				CE179F1C203A367600B24560 /* ViewController.swift */,
 				CE179F34203A497800B24560 /* TopArtistsCollectionViewController.swift */,
+				CE179F30203A45DB00B24560 /* TopTracksTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,8 +259,9 @@
 				CE179F1D203A367600B24560 /* ViewController.swift in Sources */,
 				CE4E8804203D2632006E46A6 /* ArtistCVCell.swift in Sources */,
 				CE179F1B203A367600B24560 /* AppDelegate.swift in Sources */,
-				CE179F31203A45DB00B24560 /* TopArtists2TableViewController.swift in Sources */,
+				CE179F31203A45DB00B24560 /* TopTracksTableViewController.swift in Sources */,
 				CE179F35203A497800B24560 /* TopArtistsCollectionViewController.swift in Sources */,
+				CEAAAD34203FAE2E00AD6A44 /* Track.swift in Sources */,
 				CE4E880A203D29AC006E46A6 /* ApiService.swift in Sources */,
 				CEAAAD32203E751C00AD6A44 /* ArtistTVCell.swift in Sources */,
 				CE4E8806203D276D006E46A6 /* Artist.swift in Sources */,

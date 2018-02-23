@@ -8,18 +8,17 @@
 
 import Foundation
 import Alamofire
-let urlBase = "http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=5bc03e99dcc8b895ef71175b599ca5a5&format=json"
-let pathApiVersion = "/2.0"
-let pathMethod = "?method="
-let pathMethodGetTopArtists = "chart.gettopartists"
-let pathApiKey = "api_key="
-let apiKey = "5bc03e99dcc8b895ef71175b599ca5a5"
-let apiFormat = "ormat=json"
+//let urlBase = "http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=5bc03e99dcc8b895ef71175b599ca5a5&format=json"
+let urlBase = "http://ws.audioscrobbler.com/2.0/?method="
+let methodTopArtists = "chart.gettopartists"
+let methodTopTracks = "chart.gettoptracks"
+let apiKeyPath = "api_key=5bc03e99dcc8b895ef71175b599ca5a5"
+let formatPath = "format=json"
 
 class ApiService {
-   
-    static let urlGetTopArtist = "\(urlBase)"
     
+    static let urlGetTopArtist = "\(urlBase)\(methodTopArtists)&\(apiKeyPath)&\(formatPath)"
+    static let urlGetTopTracks = "\(urlBase)\(methodTopTracks)&\(apiKeyPath)&\(formatPath)"
     
     static func getTopArtist(onCompletion: @escaping (ArtistRoot?) -> Void){
         Alamofire.request(URL(string: urlGetTopArtist)!).responseJSON { (response) in
@@ -32,19 +31,19 @@ class ApiService {
                 print(jsonError)
                 onCompletion(nil)
             }
-            
-            
-            
-//            if let jsonResponse = response.result.value as? Dictionary<String,Any>{
-//                if let jsonArtists = jsonResponse["artists"] as? Dictionary<String, Any>{
-//
-//                    print("EXITO",jsonArtists)
-//                }
-//
-//            }else{
-//                print("ERROR")
-//            }
-            
+        }
+    }
+    
+    static func getTopTracks(onCompletion: @escaping (TrackRoot?) -> Void){
+        Alamofire.request(URL(string: urlGetTopTracks)!).responseJSON { (response) in
+            print("Response: ",response)
+            do{
+                let tracks = try JSONDecoder().decode(TrackRoot.self, from: response.data!)
+                onCompletion(tracks)
+            }catch let jsonError {
+                print(jsonError)
+                onCompletion(nil)
+            }
         }
     }
     

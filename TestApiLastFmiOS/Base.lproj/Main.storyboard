@@ -120,16 +120,16 @@
             </objects>
             <point key="canvasLocation" x="1567.2" y="135.38230884557723"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Top Tracks Table View Controller-->
         <scene sceneID="XmP-6K-W2f">
             <objects>
-                <tableViewController storyboardIdentifier="TopArtistsTVC" id="WQQ-pC-wFx" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TopArtistsTVC" id="WQQ-pC-wFx" customClass="TopTracksTableViewController" customModule="TestApiLastFmiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="240" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oOe-pd-VDB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="topArtists2Cell" rowHeight="180" id="K9v-F9-Uet" customClass="ArtistTVCell" customModule="TestApiLastFmiOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopTrackCell" rowHeight="180" id="K9v-F9-Uet" customClass="ArtistTVCell" customModule="TestApiLastFmiOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9v-F9-Uet" id="hH3-NB-s1K">
