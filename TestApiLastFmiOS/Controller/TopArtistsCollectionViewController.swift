@@ -95,7 +95,8 @@ class TopArtistsCollectionViewController: UICollectionViewController {
 
 extension TopArtistsCollectionViewController : IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Top Artistas")
+        return IndicatorInfo(image: UIImage(named: "flama_hyped"))
+        //return IndicatorInfo(title: "Top Artistas")
     }
 }
 extension TopArtistsCollectionViewController : UICollectionViewDelegateFlowLayout {

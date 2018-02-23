@@ -112,6 +112,7 @@ class TopTracksTableViewController: UITableViewController {
 
 extension TopTracksTableViewController : IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Top Tracks 2")
+        return IndicatorInfo(image: UIImage(named: "ic_top"))
+        //return IndicatorInfo(title: "Top Tracks 2")
     }
 }

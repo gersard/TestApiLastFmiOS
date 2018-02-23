@@ -96,12 +96,11 @@
 				CE4E8808203D28DD006E46A6 /* Controller */,
 				CE179F1E203A367600B24560 /* Main.storyboard */,
 				CE179F23203A367600B24560 /* LaunchScreen.storyboard */,
-				CE4E8803203D2632006E46A6 /* ArtistCVCell.swift */,
-				CEAAAD31203E751C00AD6A44 /* ArtistTVCell.swift */,
+				CEAAAD35203FDA8B00AD6A44 /* Cell */,
 				CE4E8807203D28CC006E46A6 /* Model */,
+				CEAAAD36203FDA9A00AD6A44 /* Rest */,
 				CE179F21203A367600B24560 /* Assets.xcassets */,
 				CE179F26203A367600B24560 /* Info.plist */,
-				CE4E8809203D29AC006E46A6 /* ApiService.swift */,
 			);
 			path = TestApiLastFmiOS;
 			sourceTree = "<group>";
@@ -123,6 +122,23 @@
 				CE179F30203A45DB00B24560 /* TopTracksTableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEAAAD35203FDA8B00AD6A44 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE4E8803203D2632006E46A6 /* ArtistCVCell.swift */,
+				CEAAAD31203E751C00AD6A44 /* ArtistTVCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CEAAAD36203FDA9A00AD6A44 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				CE4E8809203D29AC006E46A6 /* ApiService.swift */,
+			);
+			path = Rest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

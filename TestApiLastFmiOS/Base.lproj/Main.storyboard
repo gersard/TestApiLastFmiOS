@@ -142,34 +142,61 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHc-UX-Hls">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boulevard of broken dreams" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NkP-HS-Cdk">
-                                                    <rect key="frame" x="40" y="80" width="295" height="57.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boulevard of brok" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NkP-HS-Cdk">
+                                                    <rect key="frame" x="40" y="70" width="295" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elc-8R-DHb">
-                                                    <rect key="frame" x="40" y="145" width="295" height="20.5"/>
+                                                    <rect key="frame" x="40" y="106.5" width="295" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aS0-Rz-gR7">
-                                                    <rect key="frame" x="115" y="175.5" width="145" height="18"/>
+                                                    <rect key="frame" x="75" y="137" width="225" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLp-fq-gHP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="62.5" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55634" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvi-dx-88r">
-                                                            <rect key="frame" x="82.5" y="0.0" width="62.5" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UzC-HS-qgP">
+                                                            <rect key="frame" x="0.0" y="7" width="102.5" height="36"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_listeners" translatesAutoresizingMaskIntoConstraints="NO" id="RI3-1d-p1A">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="36"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="40" id="8Q2-YV-vzr"/>
+                                                                        <constraint firstAttribute="height" constant="36" id="yUG-NP-rKp"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLp-fq-gHP">
+                                                                    <rect key="frame" x="40" y="0.0" width="62.5" height="36"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rB0-aa-pAf">
+                                                            <rect key="frame" x="122.5" y="1" width="102.5" height="48"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_playcount" translatesAutoresizingMaskIntoConstraints="NO" id="TBm-wC-NA6">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="38" height="48"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="38" id="9HP-9E-6Bg"/>
+                                                                        <constraint firstAttribute="height" constant="48" id="Ena-JS-CnV"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55634" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvi-dx-88r">
+                                                                    <rect key="frame" x="38" y="0.0" width="64.5" height="48"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="FLs-gE-hUK"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.39966823630136988" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -180,7 +207,7 @@
                                                 <constraint firstItem="NkP-HS-Cdk" firstAttribute="leading" secondItem="tHc-UX-Hls" secondAttribute="leading" constant="40" id="7Ah-dc-jsV"/>
                                                 <constraint firstItem="Elc-8R-DHb" firstAttribute="centerX" secondItem="tHc-UX-Hls" secondAttribute="centerX" id="NnL-cN-73a"/>
                                                 <constraint firstItem="Elc-8R-DHb" firstAttribute="top" secondItem="NkP-HS-Cdk" secondAttribute="bottom" constant="8" id="Q6X-dq-SiK"/>
-                                                <constraint firstItem="NkP-HS-Cdk" firstAttribute="top" secondItem="tHc-UX-Hls" secondAttribute="top" constant="80" id="ZMd-8p-ibt"/>
+                                                <constraint firstItem="NkP-HS-Cdk" firstAttribute="top" secondItem="tHc-UX-Hls" secondAttribute="top" constant="70" id="ZMd-8p-ibt"/>
                                                 <constraint firstItem="aS0-Rz-gR7" firstAttribute="centerX" secondItem="tHc-UX-Hls" secondAttribute="centerX" id="iBI-4a-J53"/>
                                                 <constraint firstItem="NkP-HS-Cdk" firstAttribute="centerX" secondItem="tHc-UX-Hls" secondAttribute="centerX" id="svE-dH-z0Z"/>
                                                 <constraint firstItem="Elc-8R-DHb" firstAttribute="leading" secondItem="tHc-UX-Hls" secondAttribute="leading" constant="40" id="uym-zc-aW0"/>
@@ -242,5 +269,7 @@
     </scenes>
     <resources>
         <image name="artistDummy" width="150" height="150"/>
+        <image name="ic_listeners" width="48" height="48"/>
+        <image name="ic_playcount" width="48" height="48"/>
     </resources>
 </document>
