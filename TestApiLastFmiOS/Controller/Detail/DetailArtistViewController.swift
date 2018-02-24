@@ -1,5 +1,5 @@
 //
-//  MainDetailViewController.swift
+//  DetailArtistViewController.swift
 //  TestApiLastFmiOS
 //
 //  Created by Gerardo Mascayano on 23-02-18.
@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class MainDetailViewController: UIViewController {
-    
-    var nameArtist : String?
+class DetailArtistViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+    
     }
 
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
 
     /*
@@ -31,4 +33,9 @@ class MainDetailViewController: UIViewController {
     }
     */
 
+}
+extension DetailArtistViewController : IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "Detalle")
+    }
 }

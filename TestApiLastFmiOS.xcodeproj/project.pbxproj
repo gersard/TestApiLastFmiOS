@@ -21,6 +21,9 @@
 		CEAAAD32203E751C00AD6A44 /* ArtistTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD31203E751C00AD6A44 /* ArtistTVCell.swift */; };
 		CEAAAD34203FAE2E00AD6A44 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD33203FAE2E00AD6A44 /* Track.swift */; };
 		CEAAAD382041060A00AD6A44 /* MainDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD372041060A00AD6A44 /* MainDetailViewController.swift */; };
+		CEAAAD3C204108A500AD6A44 /* DetailArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD3B204108A500AD6A44 /* DetailArtistViewController.swift */; };
+		CEAAAD3E204108BF00AD6A44 /* TopTracksArtistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD3D204108BF00AD6A44 /* TopTracksArtistTableViewController.swift */; };
+		CEAAAD40204108D300AD6A44 /* TopAlbumsArtistCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD3F204108D300AD6A44 /* TopAlbumsArtistCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		CEAAAD31203E751C00AD6A44 /* ArtistTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTVCell.swift; sourceTree = "<group>"; };
 		CEAAAD33203FAE2E00AD6A44 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		CEAAAD372041060A00AD6A44 /* MainDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailViewController.swift; sourceTree = "<group>"; };
+		CEAAAD3B204108A500AD6A44 /* DetailArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtistViewController.swift; sourceTree = "<group>"; };
+		CEAAAD3D204108BF00AD6A44 /* TopTracksArtistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTracksArtistTableViewController.swift; sourceTree = "<group>"; };
+		CEAAAD3F204108D300AD6A44 /* TopAlbumsArtistCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsArtistCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +125,8 @@
 		CE4E8808203D28DD006E46A6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CE179F1C203A367600B24560 /* ViewController.swift */,
-				CE179F34203A497800B24560 /* TopArtistsCollectionViewController.swift */,
-				CE179F30203A45DB00B24560 /* TopTracksTableViewController.swift */,
-				CEAAAD372041060A00AD6A44 /* MainDetailViewController.swift */,
+				CEAAAD3A2041089500AD6A44 /* Main */,
+				CEAAAD392041088B00AD6A44 /* Detail */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -142,6 +146,27 @@
 				CE4E8809203D29AC006E46A6 /* ApiService.swift */,
 			);
 			path = Rest;
+			sourceTree = "<group>";
+		};
+		CEAAAD392041088B00AD6A44 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CEAAAD372041060A00AD6A44 /* MainDetailViewController.swift */,
+				CEAAAD3B204108A500AD6A44 /* DetailArtistViewController.swift */,
+				CEAAAD3D204108BF00AD6A44 /* TopTracksArtistTableViewController.swift */,
+				CEAAAD3F204108D300AD6A44 /* TopAlbumsArtistCollectionViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CEAAAD3A2041089500AD6A44 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE179F1C203A367600B24560 /* ViewController.swift */,
+				CE179F34203A497800B24560 /* TopArtistsCollectionViewController.swift */,
+				CE179F30203A45DB00B24560 /* TopTracksTableViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,13 +302,16 @@
 			files = (
 				CE179F1D203A367600B24560 /* ViewController.swift in Sources */,
 				CE4E8804203D2632006E46A6 /* ArtistCVCell.swift in Sources */,
+				CEAAAD40204108D300AD6A44 /* TopAlbumsArtistCollectionViewController.swift in Sources */,
 				CE179F1B203A367600B24560 /* AppDelegate.swift in Sources */,
 				CE179F31203A45DB00B24560 /* TopTracksTableViewController.swift in Sources */,
+				CEAAAD3E204108BF00AD6A44 /* TopTracksArtistTableViewController.swift in Sources */,
 				CE179F35203A497800B24560 /* TopArtistsCollectionViewController.swift in Sources */,
 				CEAAAD34203FAE2E00AD6A44 /* Track.swift in Sources */,
 				CEAAAD382041060A00AD6A44 /* MainDetailViewController.swift in Sources */,
 				CE4E880A203D29AC006E46A6 /* ApiService.swift in Sources */,
 				CEAAAD32203E751C00AD6A44 /* ArtistTVCell.swift in Sources */,
+				CEAAAD3C204108A500AD6A44 /* DetailArtistViewController.swift in Sources */,
 				CE4E8806203D276D006E46A6 /* Artist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

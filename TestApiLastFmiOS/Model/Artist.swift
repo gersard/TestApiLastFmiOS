@@ -13,10 +13,11 @@ struct ArtistRoot: Decodable {
 struct Artists : Decodable{
     let artist: [Artist]
 }
-struct Artist : Decodable {
+struct Artist : Codable {
     let name: String
     let playcount: String?
     let listeners: String?
+    let bio: Bio?
     let image: [ArtistImage]?
     
 }
@@ -28,4 +29,16 @@ struct ArtistImage: Codable {
     private enum CodingKeys : String, CodingKey {
         case text = "#text", size
     }
+}
+
+struct DetailArtist : Codable {
+    let detailArtist: Artist
+    
+    private enum CodingKeys : String, CodingKey {
+        case detailArtist = "artist"
+    }
+}
+
+struct Bio: Codable {
+    let content: String
 }
