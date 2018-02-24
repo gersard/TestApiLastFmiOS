@@ -15,6 +15,7 @@ private let reuseIdentifier = "ArtistsCVC"
 class TopArtistsCollectionViewController: UICollectionViewController {
 
     var topArtists: [Artist]?
+    var artistSelected : Artist?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +30,18 @@ class TopArtistsCollectionViewController: UICollectionViewController {
             }
         }
     }
-    /*
-    // MARK: - Navigation
+        // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "CvToDetalle" {
+            if let detailVC = segue.destination as? MainDetailViewController {
+                detailVC.nameArtist = artistSelected?.name
+            }
+        }
+        
     }
-    */
+ 
 
     // MARK: UICollectionViewDataSource
    
@@ -58,6 +62,11 @@ class TopArtistsCollectionViewController: UICollectionViewController {
         }
     
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.artistSelected = self.topArtists![indexPath.row]
+        self.performSegue(withIdentifier: "CvToDetalle", sender: nil)
     }
 
     // MARK: UICollectionViewDelegate
