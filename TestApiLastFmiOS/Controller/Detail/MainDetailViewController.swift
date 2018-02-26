@@ -16,14 +16,17 @@ class MainDetailViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         loadDesign()
         super.viewDidLoad()
-        ApiService.getInfoArtist(nameArtist: nameArtist!) { (artist) in
-            
-        }
+        
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+        
+        let detailArtistVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailArtist") as! DetailArtistViewController
+        
+        detailArtistVC.artistName = self.nameArtist
+        
         return [
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailArtist"),
+            detailArtistVC,
             UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TopTracksDetailArtist"),
             UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TopAlbumsDetailArtist")
         ]

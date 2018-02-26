@@ -49,7 +49,7 @@ class ApiService {
         }
     }
     
-    static func getInfoArtist(nameArtist: String, completion: @escaping (Artist) -> Void){
+    static func getInfoArtist(nameArtist: String, completion: @escaping (Artist?) -> Void){
         let parametersArtist: Parameters = ["artist": nameArtist]
         let header: HTTPHeaders = ["Content-Type": "application/json"]
         
@@ -57,9 +57,11 @@ class ApiService {
             //Respuesta
             do{
                 let artist = try JSONDecoder().decode(DetailArtist.self, from: response.data!)
-                print(artist.detailArtist.bio?.content)
+               // print(artist.detailArtist.bio?.content)
+                completion(artist.detailArtist)
             }catch let jsonError {
                 print(jsonError)
+                completion(nil)
             }
             
         }

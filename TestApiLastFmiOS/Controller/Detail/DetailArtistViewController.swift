@@ -8,12 +8,29 @@
 
 import UIKit
 import XLPagerTabStrip
+import Alamofire
 
 class DetailArtistViewController: UIViewController {
+    
+    @IBOutlet weak var artistImage: UIImageView!
+    @IBOutlet weak var artistNameLabel: UILabel!
+    @IBOutlet weak var artistListenersLabel: UILabel!
+    @IBOutlet weak var artistPlaycountsLabel: UILabel!
+    @IBOutlet weak var artistTagsLabel: UILabel!
+    @IBOutlet weak var artistInfoLabel: UILabel!
+    var artistName: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ApiService.getInfoArtist(nameArtist: artistName!) { (artist) in
+            if artist != nil {
+                Alamofire.request(URL(string: (artist?.image![2].text)!)!).response{
+                    (response) in
+                    self.artistImage.image = UIImage(data: response.data!, scale: 1)
+                }
+            }
+        }
+        artistNameLabel.text = artistName
     
     }
 
