@@ -214,6 +214,8 @@
                         <outlet property="artistNameLabel" destination="vUm-sm-KTB" id="e5k-ZO-FD0"/>
                         <outlet property="artistPlaycountsLabel" destination="nRV-Yo-5bK" id="JPt-Bb-7Tx"/>
                         <outlet property="artistTagsLabel" destination="Fag-zu-IBt" id="hFk-ef-p8N"/>
+                        <outlet property="scrollview" destination="4uA-NU-iuK" id="OET-y5-tbt"/>
+                        <outlet property="viewScrollable" destination="7tt-Dc-FJ1" id="h5k-ym-oW6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83k-xY-ou9" userLabel="First Responder" sceneMemberID="firstResponder"/>

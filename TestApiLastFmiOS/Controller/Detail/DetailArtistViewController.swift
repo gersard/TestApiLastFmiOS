@@ -12,6 +12,8 @@ import Alamofire
 
 class DetailArtistViewController: UIViewController {
     
+    @IBOutlet weak var viewScrollable: UIView!
+    @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var artistImage: UIImageView!
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var artistListenersLabel: UILabel!
@@ -44,9 +46,11 @@ class DetailArtistViewController: UIViewController {
     
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.scrollview.contentSize = CGSize(width: UIScreen.main.bounds.width, height: self.artistInfoLabel.bounds.height + 300)
+         //self.scrollview.contentSize = CGSize(width: UIScreen.main.bounds.width, height: self.viewScrollable.bounds.height + 200)
     }
     
 

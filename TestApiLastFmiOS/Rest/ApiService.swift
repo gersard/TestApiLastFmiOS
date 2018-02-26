@@ -13,6 +13,7 @@ let urlBase = "http://ws.audioscrobbler.com/2.0/?method="
 let methodTopArtists = "chart.gettopartists"
 let methodTopTracks = "chart.gettoptracks"
 let methodInfoArtist = "artist.getinfo"
+let languagePath = "lang"
 let apiKeyPath = "api_key=5bc03e99dcc8b895ef71175b599ca5a5"
 let formatPath = "format=json"
 
@@ -50,7 +51,7 @@ class ApiService {
     }
     
     static func getInfoArtist(nameArtist: String, completion: @escaping (Artist?) -> Void){
-        let parametersArtist: Parameters = ["artist": nameArtist]
+        let parametersArtist: Parameters = ["artist": nameArtist, languagePath : "es"]
         let header: HTTPHeaders = ["Content-Type": "application/json"]
         
         Alamofire.request(URL(string: urlGetInfoArtist)!, method: .get, parameters: parametersArtist, encoding: URLEncoding.default, headers: header).responseJSON { (response) in
