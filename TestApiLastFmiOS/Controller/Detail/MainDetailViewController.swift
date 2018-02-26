@@ -31,7 +31,12 @@ class MainDetailViewController: ButtonBarPagerTabStripViewController {
             UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TopAlbumsDetailArtist")
         ]
     }
-
+    
+    
+    @IBAction func backPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
     func loadDesign() {
         

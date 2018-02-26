@@ -18,6 +18,8 @@ struct Artist : Codable {
     let playcount: String?
     let listeners: String?
     let bio: Bio?
+    let stats: Stats?
+    let tags: Tags?
     let image: [ArtistImage]?
     
 }
@@ -42,3 +44,40 @@ struct DetailArtist : Codable {
 struct Bio: Codable {
     let content: String
 }
+
+struct Stats: Codable {
+    let listeners: String
+    let playcount: String
+}
+
+struct RootTag : Codable {
+    let tags: Tags
+}
+struct Tags : Codable {
+    let tag: [Tag]
+}
+struct Tag: Codable {
+    let name:String
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

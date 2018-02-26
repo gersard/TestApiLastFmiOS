@@ -28,6 +28,16 @@ class DetailArtistViewController: UIViewController {
                     (response) in
                     self.artistImage.image = UIImage(data: response.data!, scale: 1)
                 }
+                self.artistInfoLabel.text = artist?.bio?.content
+                self.artistListenersLabel.text = artist?.stats?.listeners
+                self.artistPlaycountsLabel.text = artist?.stats?.playcount
+                
+                var tags = ""
+                for tag in (artist?.tags?.tag)! {
+                    tags = (tags.isEmpty) ? "\(tag.name)" : "\(tags),\(tag.name)"
+                }
+                self.artistTagsLabel.text = tags
+                
             }
         }
         artistNameLabel.text = artistName
