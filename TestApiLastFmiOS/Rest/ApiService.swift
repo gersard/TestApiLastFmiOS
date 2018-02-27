@@ -14,6 +14,7 @@ let methodTopArtists = "chart.gettopartists"
 let methodTopTracks = "chart.gettoptracks"
 let methodInfoArtist = "artist.getinfo"
 let methodTopTracksFromArtist = "artist.gettoptracks"
+let methodTopAlbumsFromArtist = "artist.gettopalbums"
 let languagePath = "lang"
 let apiKeyPath = "api_key=5bc03e99dcc8b895ef71175b599ca5a5"
 let formatPath = "format=json"
@@ -24,6 +25,7 @@ class ApiService {
     static let urlGetTopTracks = "\(urlBase)\(methodTopTracks)&\(apiKeyPath)&\(formatPath)"
     static let urlGetInfoArtist = "\(urlBase)\(methodInfoArtist)&\(apiKeyPath)&\(formatPath)"
     static let urlGetTopTracksFromArtist = "\(urlBase)\(methodTopTracksFromArtist)&\(apiKeyPath)&\(formatPath)"
+    static let urlGetTopAlbumsFromArtist = "\(urlBase)\(methodTopAlbumsFromArtist)&\(apiKeyPath)&\(formatPath)"
     
     static func getTopArtist(onCompletion: @escaping (ArtistRoot?) -> Void){
         Alamofire.request(URL(string: urlGetTopArtist)!).responseJSON { (response) in
@@ -81,7 +83,22 @@ class ApiService {
                 print(error)
             }
         }
-        
+    }
+    
+    static func getTopAlbumsFromArtist(nameArtist: String, completion: @escaping ([Album]?) -> Void){
+        let parametersTopAlbum: Parameters = ["artist": nameArtist]
+        Alamofire.request(URL(string: urlGetTopAlbumsFromArtist)!, method: .get, parameters: parametersTopAlbum, encoding: URLEncoding.default).responseJSON { (response) in
+            
+            do{
+                let topAlbums = try JSONDecoder().decode(AlbumRoot.self, from: response.data!)
+                
+                completion(topAlbums.topalbums.album)
+            } catch let error {
+                print(error)
+                completion(nil)
+            }
+            
+        }
     }
     
 }

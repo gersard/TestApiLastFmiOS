@@ -8,12 +8,14 @@
 
 import UIKit
 import XLPagerTabStrip
+import Alamofire
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "TopAlbumCell"
 
 class TopAlbumsArtistCollectionViewController: UICollectionViewController {
 
-     var artistName: String?
+    var artistName: String?
+    var albums: [Album]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +24,14 @@ class TopAlbumsArtistCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        ApiService.getTopAlbumsFromArtist(nameArtist: artistName!) { (albums) in
+            if albums != nil {
+                self.albums = albums
+                self.collectionView?.reloadData()
+            }
+        }
     }
 
     /*
@@ -44,21 +46,23 @@ class TopAlbumsArtistCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        
+        return (self.albums != nil) ? (self.albums?.count)! : 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! AlbumCVCell
+        
+        let currentAlbum = albums![indexPath.row]
+        cell.albumNameLabel.text = (currentAlbum.name != "") ? currentAlbum.name : "Sin nombre"
+        if let imageUrl = URL(string: currentAlbum.image[2].text) {
+            Alamofire.request(imageUrl).response{
+                (response) in
+                cell.albumImage.image = UIImage(data: response.data!, scale: 1)
+            }
+        }
+       
     
         return cell
     }
@@ -98,5 +102,14 @@ class TopAlbumsArtistCollectionViewController: UICollectionViewController {
 extension TopAlbumsArtistCollectionViewController : IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Albums")
+    }
+}
+extension TopAlbumsArtistCollectionViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let widthScreen = UIScreen.main.bounds.size.width
+        let cellWidth = widthScreen - 20
+        
+        return CGSize(width: cellWidth / 2, height: cellWidth / 2)
     }
 }
