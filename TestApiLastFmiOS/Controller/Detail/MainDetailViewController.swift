@@ -12,7 +12,7 @@ import XLPagerTabStrip
 class MainDetailViewController: ButtonBarPagerTabStripViewController {
     
     var nameArtist : String?
-
+    
     override func viewDidLoad() {
         loadDesign()
         super.viewDidLoad()
@@ -22,13 +22,17 @@ class MainDetailViewController: ButtonBarPagerTabStripViewController {
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         
         let detailArtistVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailArtist") as! DetailArtistViewController
+        let detailTopTracksArtistVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TopTracksDetailArtist") as! TopTracksArtistTableViewController
+        let detailTopalbumsArtistVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TopAlbumsDetailArtist") as! TopAlbumsArtistCollectionViewController
         
         detailArtistVC.artistName = self.nameArtist
+        detailTopTracksArtistVC.artistName = self.nameArtist
+        detailTopalbumsArtistVC.artistName = self.nameArtist
         
         return [
             detailArtistVC,
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TopTracksDetailArtist"),
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TopAlbumsDetailArtist")
+            detailTopTracksArtistVC,
+            detailTopalbumsArtistVC
         ]
     }
     
@@ -37,7 +41,7 @@ class MainDetailViewController: ButtonBarPagerTabStripViewController {
         dismiss(animated: true, completion: nil)
     }
     
-
+    
     func loadDesign() {
         
         let colorPrimary = UIColor(red:0.22, green:0.24, blue:0.26, alpha:1.0)
@@ -80,5 +84,5 @@ class MainDetailViewController: ButtonBarPagerTabStripViewController {
         }
         
     }
-
+    
 }

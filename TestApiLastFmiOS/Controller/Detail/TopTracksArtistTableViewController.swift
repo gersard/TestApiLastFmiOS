@@ -11,42 +11,48 @@ import XLPagerTabStrip
 
 class TopTracksArtistTableViewController: UITableViewController {
 
+    var artistName: String?
+    var topTracks: [Track]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        ApiService.getTopTracksFromArtist(nameArtist: artistName!) { (tracks) in
+            
+            if tracks != nil {
+                self.topTracks = (tracks?.track)!
+                self.tableView.reloadData()
+            }
+        }
+       
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (topTracks != nil) ? topTracks!.count : 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TopTrackFromArtistCell", for: indexPath) as! TrackTVCell
 
-        // Configure the cell...
+        let currentTrack = self.topTracks![indexPath.row]
+        
+        cell.nameTrackLabel.text = currentTrack.name
+        cell.listenersTrackLabel.text = currentTrack.listeners
+        cell.playcountsTrackLabel.text = currentTrack.playcount
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

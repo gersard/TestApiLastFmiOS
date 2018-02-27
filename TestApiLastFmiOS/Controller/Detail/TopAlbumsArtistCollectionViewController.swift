@@ -13,6 +13,8 @@ private let reuseIdentifier = "Cell"
 
 class TopAlbumsArtistCollectionViewController: UICollectionViewController {
 
+     var artistName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

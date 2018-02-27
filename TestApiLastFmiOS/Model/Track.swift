@@ -9,7 +9,8 @@
 import Foundation
 
 struct TrackRoot : Decodable {
-    let tracks : Tracks
+    let tracks : Tracks?
+    let toptracks : Tracks?
 }
 
 struct Tracks : Decodable{
@@ -33,3 +34,4 @@ struct TrackImage: Codable {
         case text = "#text", size
     }
 }
+

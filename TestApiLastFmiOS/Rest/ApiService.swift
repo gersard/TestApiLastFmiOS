@@ -13,6 +13,7 @@ let urlBase = "http://ws.audioscrobbler.com/2.0/?method="
 let methodTopArtists = "chart.gettopartists"
 let methodTopTracks = "chart.gettoptracks"
 let methodInfoArtist = "artist.getinfo"
+let methodTopTracksFromArtist = "artist.gettoptracks"
 let languagePath = "lang"
 let apiKeyPath = "api_key=5bc03e99dcc8b895ef71175b599ca5a5"
 let formatPath = "format=json"
@@ -22,6 +23,7 @@ class ApiService {
     static let urlGetTopArtist = "\(urlBase)\(methodTopArtists)&\(apiKeyPath)&\(formatPath)"
     static let urlGetTopTracks = "\(urlBase)\(methodTopTracks)&\(apiKeyPath)&\(formatPath)"
     static let urlGetInfoArtist = "\(urlBase)\(methodInfoArtist)&\(apiKeyPath)&\(formatPath)"
+    static let urlGetTopTracksFromArtist = "\(urlBase)\(methodTopTracksFromArtist)&\(apiKeyPath)&\(formatPath)"
     
     static func getTopArtist(onCompletion: @escaping (ArtistRoot?) -> Void){
         Alamofire.request(URL(string: urlGetTopArtist)!).responseJSON { (response) in
@@ -66,8 +68,19 @@ class ApiService {
             }
             
         }
-       
-        
+    }
+    
+    static func getTopTracksFromArtist(nameArtist: String, completion: @escaping (Tracks?
+        ) -> Void){
+        let parametersTopTrack: Parameters = ["artist": nameArtist]
+        Alamofire.request(URL(string: urlGetTopTracksFromArtist)!, method: .get, parameters: parametersTopTrack, encoding: URLEncoding.default).responseJSON { (response) in
+            do{
+                let topTracks = try JSONDecoder().decode(TrackRoot.self, from: response.data!)
+                completion(topTracks.toptracks)
+            }catch let error {
+                print(error)
+            }
+        }
         
     }
     

@@ -24,7 +24,7 @@ class TopTracksTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         ApiService.getTopTracks { (trackRoot) in
-            if let track = trackRoot?.tracks.track {
+            if let track = trackRoot?.tracks?.track {
                 self.tracks = track
                 self.tableView.reloadData()
             } else{

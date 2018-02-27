@@ -24,6 +24,7 @@
 		CEAAAD3C204108A500AD6A44 /* DetailArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD3B204108A500AD6A44 /* DetailArtistViewController.swift */; };
 		CEAAAD3E204108BF00AD6A44 /* TopTracksArtistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD3D204108BF00AD6A44 /* TopTracksArtistTableViewController.swift */; };
 		CEAAAD40204108D300AD6A44 /* TopAlbumsArtistCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD3F204108D300AD6A44 /* TopAlbumsArtistCollectionViewController.swift */; };
+		CEAAAD422044F01B00AD6A44 /* TrackTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD412044F01B00AD6A44 /* TrackTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		CEAAAD3B204108A500AD6A44 /* DetailArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtistViewController.swift; sourceTree = "<group>"; };
 		CEAAAD3D204108BF00AD6A44 /* TopTracksArtistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTracksArtistTableViewController.swift; sourceTree = "<group>"; };
 		CEAAAD3F204108D300AD6A44 /* TopAlbumsArtistCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsArtistCollectionViewController.swift; sourceTree = "<group>"; };
+		CEAAAD412044F01B00AD6A44 /* TrackTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				CE4E8803203D2632006E46A6 /* ArtistCVCell.swift */,
 				CEAAAD31203E751C00AD6A44 /* ArtistTVCell.swift */,
+				CEAAAD412044F01B00AD6A44 /* TrackTVCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				CE179F31203A45DB00B24560 /* TopTracksTableViewController.swift in Sources */,
 				CEAAAD3E204108BF00AD6A44 /* TopTracksArtistTableViewController.swift in Sources */,
 				CE179F35203A497800B24560 /* TopArtistsCollectionViewController.swift in Sources */,
+				CEAAAD422044F01B00AD6A44 /* TrackTVCell.swift in Sources */,
 				CEAAAD34203FAE2E00AD6A44 /* Track.swift in Sources */,
 				CEAAAD382041060A00AD6A44 /* MainDetailViewController.swift in Sources */,
 				CE4E880A203D29AC006E46A6 /* ApiService.swift in Sources */,
