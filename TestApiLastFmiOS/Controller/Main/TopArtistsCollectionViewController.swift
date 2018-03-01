@@ -12,7 +12,7 @@ import Alamofire
 
 private let reuseIdentifier = "ArtistsCVC"
 
-class TopArtistsCollectionViewController: UICollectionViewController {
+class TopArtistsCollectionViewController: UICollectionViewController, FavoriteButtonPressed {
 
     var topArtists: [Artist]?
     var artistSelected : Artist?
@@ -62,6 +62,7 @@ class TopArtistsCollectionViewController: UICollectionViewController {
             (response) in
             cell.imageArtist.image = UIImage(data: response.data!, scale: 1)
         }
+        cell.delegate = self
     
         return cell
     }
@@ -69,6 +70,13 @@ class TopArtistsCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.artistSelected = self.topArtists![indexPath.row]
         self.performSegue(withIdentifier: "CvToDetalle", sender: nil)
+    }
+    
+    func btnFavoritePressed(cell: ArtistCVCell) {
+        let _ = self.collectionView?.indexPath(for: cell)
+        
+        let favorite = !cell.buttonFavorite.isSelected
+        cell.buttonFavorite.isSelected = favorite
     }
 
     // MARK: UICollectionViewDelegate

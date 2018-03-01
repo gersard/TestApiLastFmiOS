@@ -14,8 +14,6 @@ class ViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         loadDesign()
         super.viewDidLoad()
-        
-        
     }
 
     override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

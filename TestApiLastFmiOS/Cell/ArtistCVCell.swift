@@ -8,9 +8,23 @@
 
 import UIKit
 
+protocol FavoriteButtonPressed {
+    func btnFavoritePressed(cell: ArtistCVCell)
+}
+
 class ArtistCVCell: UICollectionViewCell {
     
     @IBOutlet weak var imageArtist: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var buttonFavorite: UIButton!
+    
+    var delegate: FavoriteButtonPressed?
+    
+    @IBAction func btnFavoritePressed(_ sender: Any) {
+        if let _ = delegate {
+            delegate?.btnFavoritePressed(cell: self)
+        }
+    }
+    
     
 }
