@@ -27,6 +27,7 @@
 		CEAAAD422044F01B00AD6A44 /* TrackTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD412044F01B00AD6A44 /* TrackTVCell.swift */; };
 		CEAAAD442044FC0600AD6A44 /* AlbumCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD432044FC0600AD6A44 /* AlbumCVCell.swift */; };
 		CEAAAD462044FE3A00AD6A44 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD452044FE3A00AD6A44 /* Album.swift */; };
+		CEAAAD4920549B0B00AD6A44 /* ArtistRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD4820549B0B00AD6A44 /* ArtistRealm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		CEAAAD412044F01B00AD6A44 /* TrackTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTVCell.swift; sourceTree = "<group>"; };
 		CEAAAD432044FC0600AD6A44 /* AlbumCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCVCell.swift; sourceTree = "<group>"; };
 		CEAAAD452044FE3A00AD6A44 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		CEAAAD4820549B0B00AD6A44 /* ArtistRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRealm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		CE4E8807203D28CC006E46A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CEAAAD4720549AF300AD6A44 /* RealmModel */,
 				CE4E8805203D276D006E46A6 /* Artist.swift */,
 				CEAAAD33203FAE2E00AD6A44 /* Track.swift */,
 				CEAAAD452044FE3A00AD6A44 /* Album.swift */,
@@ -176,6 +179,14 @@
 				CE179F30203A45DB00B24560 /* TopTracksTableViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		CEAAAD4720549AF300AD6A44 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEAAAD4820549B0B00AD6A44 /* ArtistRealm.swift */,
+			);
+			path = RealmModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,11 +268,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestApiLastFmiOS/Pods-TestApiLastFmiOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +338,7 @@
 				CEAAAD382041060A00AD6A44 /* MainDetailViewController.swift in Sources */,
 				CE4E880A203D29AC006E46A6 /* ApiService.swift in Sources */,
 				CEAAAD32203E751C00AD6A44 /* ArtistTVCell.swift in Sources */,
+				CEAAAD4920549B0B00AD6A44 /* ArtistRealm.swift in Sources */,
 				CEAAAD3C204108A500AD6A44 /* DetailArtistViewController.swift in Sources */,
 				CE4E8806203D276D006E46A6 /* Artist.swift in Sources */,
 			);

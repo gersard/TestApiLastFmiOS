@@ -1,15 +1,23 @@
 PODS:
   - Alamofire (4.6.0)
+  - Realm (3.1.0):
+    - Realm/Headers (= 3.1.0)
+  - Realm/Headers (3.1.0)
+  - RealmSwift (3.1.0):
+    - Realm (= 3.1.0)
   - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.6)
+  - RealmSwift
   - XLPagerTabStrip (~> 8.0)
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Realm: 09513d7c054678d65cd02ce09871f805b0d758ac
+  RealmSwift: e868fee9b10e5490ad94b6b6ecd9027944da1824
   XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: fef7a948847fecd5b02ab235bd6c2a52c14e043b
+PODFILE CHECKSUM: 5563b39b2c7cfdb704d3be0354670bc063043f28
 
 COCOAPODS: 1.4.0
