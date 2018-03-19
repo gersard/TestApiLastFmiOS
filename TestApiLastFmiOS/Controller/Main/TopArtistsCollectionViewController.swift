@@ -9,6 +9,7 @@
 import UIKit
 import XLPagerTabStrip
 import Alamofire
+import RealmSwift
 
 private let reuseIdentifier = "ArtistsCVC"
 
@@ -16,6 +17,7 @@ class TopArtistsCollectionViewController: UICollectionViewController, FavoriteBu
 
     var topArtists: [Artist]?
     var artistSelected : Artist?
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,23 @@ class TopArtistsCollectionViewController: UICollectionViewController, FavoriteBu
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtistCVCell
         
         let currentArtist = topArtists![indexPath.row]
+        let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [NSPredicate(format: "name = %@ ", currentArtist.name)])
+        var artistRealm: ArtistRealm? = realm.objects(ArtistRealm.self).filter(predicate).first
+        
+        if artistRealm == nil {
+            try! realm.write {
+                artistRealm = ArtistRealm()
+                artistRealm!.name = currentArtist.name
+                artistRealm!.isFavoriote = false
+                realm.add(artistRealm!)
+            }
+        } else {
+            cell.buttonFavorite.isSelected = (artistRealm?.isFavoriote ?? false)
+        }
+        
+        
+        
+        
         cell.nameLabel.text = currentArtist.name
         Alamofire.request(URL(string: currentArtist.image![2].text)!).response{
             (response) in
@@ -73,10 +92,18 @@ class TopArtistsCollectionViewController: UICollectionViewController, FavoriteBu
     }
     
     func btnFavoritePressed(cell: ArtistCVCell) {
-        let _ = self.collectionView?.indexPath(for: cell)
+        let indexPath = self.collectionView?.indexPath(for: cell)
         
         let favorite = !cell.buttonFavorite.isSelected
         cell.buttonFavorite.isSelected = favorite
+        
+        let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [NSPredicate(format: "name = %@ ", topArtists![(indexPath?.row)!].name)])
+        let artistRealm: ArtistRealm? = realm.objects(ArtistRealm.self).filter(predicate).first
+        if artistRealm != nil {
+            try! realm.write {
+                artistRealm?.isFavoriote = !((artistRealm?.isFavoriote)!)
+            }
+        }
     }
 
     // MARK: UICollectionViewDelegate

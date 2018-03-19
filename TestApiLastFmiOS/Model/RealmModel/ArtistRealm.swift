@@ -11,6 +11,6 @@ import RealmSwift
 
 @objcMembers
 class ArtistRealm: Object {
-    dynamic var name: String?
-    dynamic var isFavoriote: Bool?
+    dynamic var name: String = ""
+    dynamic var isFavoriote: Bool = false
 }
