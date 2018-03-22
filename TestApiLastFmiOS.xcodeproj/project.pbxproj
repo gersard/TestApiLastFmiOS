@@ -28,6 +28,8 @@
 		CEAAAD442044FC0600AD6A44 /* AlbumCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD432044FC0600AD6A44 /* AlbumCVCell.swift */; };
 		CEAAAD462044FE3A00AD6A44 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD452044FE3A00AD6A44 /* Album.swift */; };
 		CEAAAD4920549B0B00AD6A44 /* ArtistRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD4820549B0B00AD6A44 /* ArtistRealm.swift */; };
+		CEAAAD4B20633DD900AD6A44 /* FavoritosCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD4A20633DD900AD6A44 /* FavoritosCVC.swift */; };
+		CEAAAD4D20633F9900AD6A44 /* FavoritoCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD4C20633F9900AD6A44 /* FavoritoCVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		CEAAAD432044FC0600AD6A44 /* AlbumCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCVCell.swift; sourceTree = "<group>"; };
 		CEAAAD452044FE3A00AD6A44 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		CEAAAD4820549B0B00AD6A44 /* ArtistRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRealm.swift; sourceTree = "<group>"; };
+		CEAAAD4A20633DD900AD6A44 /* FavoritosCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosCVC.swift; sourceTree = "<group>"; };
+		CEAAAD4C20633F9900AD6A44 /* FavoritoCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritoCVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 				CEAAAD31203E751C00AD6A44 /* ArtistTVCell.swift */,
 				CEAAAD412044F01B00AD6A44 /* TrackTVCell.swift */,
 				CEAAAD432044FC0600AD6A44 /* AlbumCVCell.swift */,
+				CEAAAD4C20633F9900AD6A44 /* FavoritoCVCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				CE179F1C203A367600B24560 /* ViewController.swift */,
 				CE179F34203A497800B24560 /* TopArtistsCollectionViewController.swift */,
 				CE179F30203A45DB00B24560 /* TopTracksTableViewController.swift */,
+				CEAAAD4A20633DD900AD6A44 /* FavoritosCVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -334,12 +340,14 @@
 				CEAAAD462044FE3A00AD6A44 /* Album.swift in Sources */,
 				CE179F35203A497800B24560 /* TopArtistsCollectionViewController.swift in Sources */,
 				CEAAAD422044F01B00AD6A44 /* TrackTVCell.swift in Sources */,
+				CEAAAD4D20633F9900AD6A44 /* FavoritoCVCell.swift in Sources */,
 				CEAAAD34203FAE2E00AD6A44 /* Track.swift in Sources */,
 				CEAAAD382041060A00AD6A44 /* MainDetailViewController.swift in Sources */,
 				CE4E880A203D29AC006E46A6 /* ApiService.swift in Sources */,
 				CEAAAD32203E751C00AD6A44 /* ArtistTVCell.swift in Sources */,
 				CEAAAD4920549B0B00AD6A44 /* ArtistRealm.swift in Sources */,
 				CEAAAD3C204108A500AD6A44 /* DetailArtistViewController.swift in Sources */,
+				CEAAAD4B20633DD900AD6A44 /* FavoritosCVC.swift in Sources */,
 				CE4E8806203D276D006E46A6 /* Artist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

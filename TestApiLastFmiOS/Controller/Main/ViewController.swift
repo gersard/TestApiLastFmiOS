@@ -19,7 +19,8 @@ class ViewController: ButtonBarPagerTabStripViewController {
     override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let topArtistCVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TopArtistsCVC")
         let topArtistsTVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TopArtistsTVC")
-        return [topArtistCVC, topArtistsTVC]
+        let favoritosCVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FavoritosCVC")
+        return [topArtistCVC, topArtistsTVC, favoritosCVC]
     }
 
     func loadDesign() {
