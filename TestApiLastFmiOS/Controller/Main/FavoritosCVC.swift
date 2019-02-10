@@ -14,14 +14,12 @@ private let reuseIdentifier = "FavoritoCell"
 
 class FavoritosCVC: UICollectionViewController {
     
-    var favoriteArtists: Results<ArtistRealm>?    let realm= ! ()
+    var favoriteArtists: Results<ArtistRealm>?
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.backgroundColor = UIColor(red:0.22, green:0.24, blue:0.26, alpha:1.0)
-        
-        
-        
     
     }
 
